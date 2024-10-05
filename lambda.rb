@@ -1,14 +1,9 @@
-my_lambda = lambda do |numbers|
-    index = 0
-    puts 'Número atual + Próximo número'
-    numbers.each do |number|
-        return if numbers[index] == numbers.last
-        puts "(#{numbers[index]}) + (#{numbers[index + 1]})"
-        puts numbers[index] + numbers[index + 1]
-        index += 1
-    end
+def foo(first_lambda, second_lambda)
+    first_lambda.call
+    second_lambda.call
 end
 
-numbers = [1, 2, 3, 4]
+first_lambda = lambda { puts "my first lambda"}
+second_lambda = lambda {puts "my second lambda"}
 
-my_lambda.call(numbers)
+foo(first_lambda, second_lambda)
