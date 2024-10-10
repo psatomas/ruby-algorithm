@@ -1,9 +1,7 @@
 class Foo
-    def bar
+    def self.bar
         puts self
     end
 end
 
-foo = Foo.new
-puts foo
-foo.bar
+Foo.bar
